@@ -18,8 +18,8 @@ This project is in the early stages of development and is very much still a work
 * add some type of affect to the background make it more interesting
 
 ## Links
-Project homepage: coming soon
-Repository: https://github.com/LeeVaughn/random-quote-generator
+* Project homepage: coming soon
+* Repository: https://github.com/LeeVaughn/random-quote-generator
 
 ## Author
 [Daniel Lee Vaughn](https://github.com/LeeVaughn)
