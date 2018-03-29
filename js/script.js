@@ -150,8 +150,7 @@ var colors = [
         button: "#fc5185"
     }
 ];
-// variable used to automatically generate a new quote after a period of time
-var timer = 0;
+var timer;
 
 // generates a random number, assigns it to a variable, then uses it to return a random object from the quotes array
 function getRandomQuote() {
@@ -166,7 +165,17 @@ function getRandomColor() {
 
     return colors[randomColor];
 }
- 
+
+// assigns a setInterval method to the variable so that the printQuote function will automatically run after 10 seconds
+function startTimer() {
+    timer = setInterval(printQuote, 10000);
+}
+
+// clears the setInterval method from the timer variable
+function clearTimer() {
+    clearInterval(timer);
+}
+
 function printQuote() {
     // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
     // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
@@ -183,39 +192,15 @@ function printQuote() {
     document.getElementById("quote-box").innerHTML = html;
     document.body.style.background = currentColor.background;
     document.getElementById("loadQuote").style.background = currentColor.button;
+
+    // clears any previous timers that might be running and starts a new one
+    clearTimer();
+    startTimer();
 }
 
+// runs the printQuote function upon initial page load
 printQuote();
-
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-// function quoteTimer() {
-//     if (document.getElementById("loadQuote").value == "set") {
-//         document.getElementById("loadQuote").value = "reset";
-//         // timer = setInterval("printQuote()", 10000);
-//         window.setInterval(printQuote, 10000);
-//     } else {
-//         document.getElementById("loadQuote").value = "set";
-//         window.clearInterval(timer);
-//     }
-// }
-
-// function startTimer () {
-//     window.setInterval(printQuote, 10000);
-// }
-
-// function clearTimer () {
-//     window.clearInterval(startTimer);
-// }
-
-// runs the printQuote function so that a random quote is displayed upon page load
-
-// startTimer();
-
-// quoteTimer();
-
-// // adds a timer to automatically generate a new quote every 10 seconds
-// window.setInterval(printQuote, 10000);
 
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
