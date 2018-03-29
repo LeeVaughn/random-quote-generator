@@ -45,14 +45,10 @@ body {
 .source:before {
   content: "—";
 }
-.citation {
+.category {
   font-style: italic;
 }
-.citation:before {
-  content: ", ";
-  font-style: normal;
-}
-.year:before {
+.category:before {
   content: ", ";
   font-style: normal;
 }
