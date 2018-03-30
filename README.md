@@ -1,5 +1,5 @@
 # Random Quote Generator
-This app generates random quotes pulled from an array.
+This app randomly picks a programming, learning, or success related quote from an array of objects and displays it on the screen.
 
 ## Motivation
 This is my take on the first project in the Full Stack JavaScript Techdegree program from Treehouse.
