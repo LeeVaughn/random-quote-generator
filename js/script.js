@@ -184,6 +184,14 @@ function printQuote() {
     var currentColor = getRandomColor();
     var html = "<p class='quote'> " + currentQuote.quote + "</p>";
     html += "<p class='source'> " + currentQuote.source;
+    // tests to see if the citation property is present in the currentQuote and if so, adds it to the string
+    if ("citation" in currentQuote) {
+        html += "<span class='citation'> " + currentQuote.citation + "</span>";
+    }
+    // tests to see if the year property is present in the currentQuote and if so, adds it to the string
+    if ("year" in currentQuote) {
+        html += "<span class='year'> " + currentQuote.year + "</span>";
+    }
     html += "<span class='category'> " + currentQuote.category + "</span>";
 
     // writes the info from the html variable to the div with the quote-box id
