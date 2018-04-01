@@ -188,9 +188,9 @@ function printQuote() {
     if ("citation" in currentQuote) {
         html += "<span class='citation'> " + currentQuote.citation + "</span>";
     }
-    // tests to see if the year property is present in the currentQuote and if so, adds it to the string
-    if ("year" in currentQuote) {
-        html += "<span class='year'> " + currentQuote.year + "</span>";
+    // tests to see if the date property is present in the currentQuote and if so, adds it to the string
+    if ("date" in currentQuote) {
+        html += "<span class='year'> " + currentQuote.date + "</span>";
     }
     html += "<span class='category'> " + currentQuote.category + "</span>";
 
