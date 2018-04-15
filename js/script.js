@@ -104,7 +104,28 @@ var quotes = [
         quote: "Anything worth doing well is worth doing poorly at first.",
         source: "Ray Congdon",
         category: "#learning"
+    },
+    {
+        quote: "Everyone in this country should learn to program a computer, because it teaches you to think.",
+        source: "Steve Jobs",
+        category: "#learning"
+    },
+    {
+        quote: "The biggest mistake I see new programmers make is focusing on learning syntax instead of learning how to solve problems.",
+        source: "V. Anton Spraul",
+        category: "#programming"
+    },
+    {
+        quote: "If you can’t explain something in simple terms, you don’t understand it.",
+        source: "Richard Feynman",
+        category: "#learning"
+    },
+    {
+        quote: "The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.",
+        source: "Andrew Singer",
+        category: "#programming"
     }
+    
 ];
 // creates an array of objects to store background and button color information
 // I didn't want to randomize the background color because it can sometimes lead to hard to read quotes
