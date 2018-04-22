@@ -1,5 +1,5 @@
 // creates an array of objects to store quote related information
-var quotes = [
+const quotes = [
     {
         quote: "Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.",
         source: "Patrick McKenzie",
@@ -104,32 +104,11 @@ var quotes = [
         quote: "Anything worth doing well is worth doing poorly at first.",
         source: "Ray Congdon",
         category: "#learning"
-    },
-    {
-        quote: "Everyone in this country should learn to program a computer, because it teaches you to think.",
-        source: "Steve Jobs",
-        category: "#learning"
-    },
-    {
-        quote: "The biggest mistake I see new programmers make is focusing on learning syntax instead of learning how to solve problems.",
-        source: "V. Anton Spraul",
-        category: "#programming"
-    },
-    {
-        quote: "If you can’t explain something in simple terms, you don’t understand it.",
-        source: "Richard Feynman",
-        category: "#learning"
-    },
-    {
-        quote: "The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.",
-        source: "Andrew Singer",
-        category: "#programming"
     }
-    
 ];
 // creates an array of objects to store background and button color information
 // I didn't want to randomize the background color because it can sometimes lead to hard to read quotes
-var colors = [
+const colors = [
     {
         background: "#ff2e63", //pink
         button: "#252a34"
@@ -175,14 +154,14 @@ let timer;
 
 // generates a random number, assigns it to a variable, then uses it to return a random object from the quotes array
 function getRandomQuote() {
-    let randomQuote = Math.floor(Math.random() * quotes.length);
+    const randomQuote = Math.floor(Math.random() * quotes.length);
 
     return quotes[randomQuote];
 }
 
 // generates a random number, assigns it to a variable, then uses it to return a random object from the colors array
 function getRandomColor() {
-    let randomColor = Math.floor(Math.random() * colors.length);
+    const randomColor = Math.floor(Math.random() * colors.length);
 
     return colors[randomColor];
 }
@@ -201,8 +180,8 @@ function printQuote() {
     // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
     // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
     // creates the html variable and uses the currentQuote variable along with key values to build a string
-    let currentQuote = getRandomQuote();
-    let currentColor = getRandomColor();
+    const currentQuote = getRandomQuote();
+    const currentColor = getRandomColor();
     let html = "<p class='quote'> " + currentQuote.quote + "</p>";
     html += "<p class='source'> " + currentQuote.source;
     // tests to see if the citation property is present in the currentQuote and if so, adds it to the string
