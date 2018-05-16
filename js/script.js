@@ -104,6 +104,11 @@ const quotes = [
         quote: "Anything worth doing well is worth doing poorly at first.",
         source: "Ray Congdon",
         category: "#learning"
+    },
+    {
+        quote: "It's the only job I can think of where I get to be both an engineer and an artist.",
+        source: "Andy Hertzfeld",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
