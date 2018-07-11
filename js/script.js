@@ -28,6 +28,7 @@ const quotes = [
     {
         quote: "Java is to JavaScript as ham is to hamster.",
         source: "Jeremy Keith",
+        citation: "Resilient Web Design",
         category: "#programming"
     },
     {
@@ -109,6 +110,41 @@ const quotes = [
         quote: "It's the only job I can think of where I get to be both an engineer and an artist.",
         source: "Andy Hertzfeld",
         category: "#programming"
+    },
+    {
+        quote: "I’ve finally learned what ‘upward compatible’ means.  It means we get to keep all our old mistakes.",
+        source: "Dennie van Tassel",
+        category: "#programming"
+    },
+    {
+        quote: "Controlling complexity is the essence of computer programming.",
+        source: "Brian Kernigan",
+        category: "#programming"
+    },
+    {
+        quote: "The function of good software is to make the complex appear to be simple.",
+        source: "Grady Booch",
+        category: "#programming"
+    },
+    {
+        quote: "Measuring programming progress by lines of code is like measuring aircraft building progress by weight.",
+        source: "Bill Gates",
+        category: "#programming"
+    },
+    {
+        quote: "First, solve the problem. Then, write the code.",
+        source: "Jack Johnson",
+        category: "#programming"
+    },
+    {
+        quote: "Any code of your own that you haven’t looked at for six or more months might as well have been written by someone else.",
+        source: "Eagleson's Law",
+        category: "#programming"
+    },
+    {
+        quote: "I don’t care if it works on your machine!  We are not shipping your machine!",
+        source: "Vidiu Platon",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
@@ -153,6 +189,10 @@ const colors = [
     {
         background: "#3fc1c9", //aqua
         button: "#fc5185"
+    },
+    {
+        background: "#e6a4b4", //very soft red
+        button: "#c86b85"
     }
 ];
 let timer;
