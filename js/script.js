@@ -145,6 +145,41 @@ const quotes = [
         quote: "I don’t care if it works on your machine!  We are not shipping your machine!",
         source: "Vidiu Platon",
         category: "#programming"
+    },
+    {
+        quote: "He who learns but does not think, is lost! He who thinks but does not learn is in great danger.",
+        source: "Confucius",
+        category: "#learning"
+    },
+    {
+        quote: "Every act of conscious learning requires the willingness to suffer an injury to one's self-esteem. That is why young children, before they are aware of their own self-importance, learn so easily.",
+        source: "Thomas Szasz",
+        category: "#learning"
+    },
+    {
+        quote: "A wise man can learn more from a foolish question than a fool can learn from a wise answer.",
+        source: "Bruce Lee",
+        category: "#learning"
+    },
+    {
+        quote: "Successful people do what unsuccessful people are not willing to do. Don't wish it were easier; wish you were better.",
+        source: "Jim Rohn",
+        category: "#success"
+    },
+    {
+        quote: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+        source: "Albert Schweitzer",
+        category: "#success"
+    },
+    {
+        quote: "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+        source: "Thomas Edison",
+        category: "#success"
+    },
+    {
+        quote: "I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.",
+        source: "ichael Jordan",
+        category: "#success"
     }
 ];
 // creates an array of objects to store background and button color information
@@ -212,8 +247,8 @@ function getRandomColor() {
 }
 
 // assigns a setInterval method to the variable so that the printQuote function will automatically run after 10 seconds
-function startTimer() {
-    timer = setInterval(printQuote, 10000);
+function startTimer(interval) {
+    timer = setInterval(printQuote, interval);
 }
 
 // clears the setInterval method from the timer variable
@@ -248,7 +283,7 @@ function printQuote() {
 
     // clears any previous timers that might be running and starts a new one
     clearTimer();
-    startTimer();
+    startTimer(10000);
 }
 
 // runs the printQuote function upon initial page load
