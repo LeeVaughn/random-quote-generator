@@ -185,6 +185,11 @@ const quotes = [
         quote: "Everyone in this country should learn to program a computer, because it teaches you to think.",
         source: "Steve Jobs",
         category: "#programming"
+    },
+    {
+        quote: "If you can’t explain something in simple terms, you don’t understand it.",
+        source: "Richard Feynman",
+        category: "#learning"
     }
 ];
 // creates an array of objects to store background and button color information
