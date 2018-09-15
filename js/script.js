@@ -190,6 +190,11 @@ const quotes = [
         quote: "If you can’t explain something in simple terms, you don’t understand it.",
         source: "Richard Feynman",
         category: "#learning"
+    },
+    {
+        quote: "The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.",
+        source: "Andrew Singer",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
