@@ -195,6 +195,11 @@ const quotes = [
         quote: "The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.",
         source: "Andrew Singer",
         category: "#programming"
+    },
+    {
+        quote: "The elevator to success is out of order. You'll have to use the stairs... one step at a time.",
+        source: "Joe Girard",
+        category: "#success"
     }
 ];
 // creates an array of objects to store background and button color information
