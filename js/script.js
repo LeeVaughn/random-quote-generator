@@ -253,35 +253,34 @@ const colors = [
 let timer;
 
 // generates a random number, assigns it to a variable, then uses it to return a random object from the quotes array
-function getRandomQuote() {
-    const randomQuote = Math.floor(Math.random() * quotes.length);
+// the project requirements called for a getRandomQuote function otherwise I would have just created a getRandomObject function
+// instead of the two separate functions that follow
+function getRandomQuote(array) {
+    const randomQuote = Math.floor(Math.random() * array.length);
 
     return quotes[randomQuote];
 }
 
 // generates a random number, assigns it to a variable, then uses it to return a random object from the colors array
-function getRandomColor() {
-    const randomColor = Math.floor(Math.random() * colors.length);
+function getRandomColor(array) {
+    const randomColor = Math.floor(Math.random() * array.length);
 
     return colors[randomColor];
 }
 
 // assigns a setInterval method to the variable so that the printQuote function will automatically run after 10 seconds
 function startTimer(interval) {
-    timer = setInterval(printQuote, interval);
-}
-
-// clears the setInterval method from the timer variable
-function clearTimer() {
+    // clears the setInterval method from the timer variable
     clearInterval(timer);
+    timer = setInterval(printQuote, interval);
 }
 
 function printQuote() {
     // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
     // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
     // creates the html variable and uses the currentQuote variable along with key values to build a string
-    const currentQuote = getRandomQuote();
-    const currentColor = getRandomColor();
+    const currentQuote = getRandomQuote(quotes);
+    const currentColor = getRandomColor(colors);
     let html = "<p class='quote'> " + currentQuote.quote + "</p>";
     html += "<p class='source'> " + currentQuote.source;
     // tests to see if the citation property is present in the currentQuote and if so, adds it to the string
@@ -302,7 +301,6 @@ function printQuote() {
     document.getElementById("loadQuote").style.background = currentColor.button;
 
     // clears any previous timers that might be running and starts a new one
-    clearTimer();
     startTimer(10000);
 }
 
