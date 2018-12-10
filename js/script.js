@@ -200,6 +200,66 @@ const quotes = [
         quote: "The elevator to success is out of order. You'll have to use the stairs... one step at a time.",
         source: "Joe Girard",
         category: "#success"
+    },
+    {
+        quote: "Falling in love with code means falling in love with problem solving and being a part of a forever ongoing conversation.",
+        source: "Kathryn Barrett",
+        category: "#programming"
+    },
+    {
+        quote: "There’s a big difference between making a simple product & making a product simple.",
+        source: "Des Traynor",
+        category: "#programming"
+    },
+    {
+        quote: "Documentation is a love letter that you write to your future self.",
+        source: "Damian Conway",
+        category: "#programming"
+    },
+    {
+        quote: "If at first you don’t succeed, call it version 1.0.",
+        source: "Unknown",
+        category: "#success"
+    },
+    {
+        quote: "Weeks of coding can save you hours of planning.",
+        source: "Unknown",
+        category: "#programming"
+    },
+    {
+        quote: "Commenting your code is like cleaning your bathroom - you never want to do it, but it really does create a more pleasant experience for you and your guests.",
+        source: "Ryan Campbell",
+        category: "#programming"
+    },
+    {
+        quote: "It turns out that style matters in programming for the same reason that it matters in writing. It makes for better reading.",
+        source: "Douglas Crockford",
+        category: "#programming"
+    },
+    {
+        quote: "So much complexity in software comes from trying to make one thing do two things.",
+        source: "Ryan Singer",
+        category: "#programming"
+    },
+    {
+        quote: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+        source: "Martin Fowler",
+        category: "#programming"
+    },
+    {
+        quote: "Programming is the art of doing one thing at a time.",
+        source: "Michael Feathers",
+        category: "#programming"
+    },
+    {
+        quote: "First do it, then do it right, then do it better.",
+        source: "Addy Osmani",
+        category: "#success"
+    },
+    {
+        quote: "Programming is not about typing, it's about thinking.",
+        source: "Rich Hickey",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
