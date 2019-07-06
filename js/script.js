@@ -263,7 +263,7 @@ const quotes = [
     }
 ];
 // creates an array of objects to store background and button color information
-// I didn't want to randomize the background color because it can sometimes lead to hard to read quotes
+// I didn't want to fully randomize the color because it can sometimes lead to poor contrast between quotes and background
 const colors = [
     {
         background: "#ff2e63", //pink
@@ -310,20 +310,39 @@ const colors = [
         button: "#c86b85"
     }
 ];
+// will be used to store the previously returned quotes
+const quotesReturned = [];
 let timer;
 
-// generates a random number, assigns it to a variable, then uses it to return a random object from the quotes array
-// the project requirements called for a getRandomQuote function otherwise I would have just created a getRandomObject function
-// instead of the two separate functions that follow
-function getRandomQuote(array) {
-    const randomQuote = Math.floor(Math.random() * array.length);
+/**
+ * selects a random quote object from the quotes array
+ * @return {object} randomly selected quotes object
+ */
+function getRandomQuote() {
+    // if no objects remain in the quotes array, restores the quotes array to its original state by combining the two arrays
+    if (quotes.length === 0) {
+        quotes.push.apply(quotes, quotesReturned);
+    }
+    
+    while (quotes.length > 0) {
+        const randomQuote = Math.floor(Math.random() * quotes.length);
+        const quote = quotes[randomQuote];
 
-    return quotes[randomQuote];
+        // adds the selected quote to the quotesReturned array
+        quotesReturned.push(quote);
+        // removes the selected quote from the quotes array
+        quotes.splice(randomQuote, 1);
+
+        return quote;
+    }
 }
 
-// generates a random number, assigns it to a variable, then uses it to return a random object from the colors array
-function getRandomColor(array) {
-    const randomColor = Math.floor(Math.random() * array.length);
+/**
+ * selects a random quote object from the colors array
+ * @return {object} randomly selected colors object
+ */
+function getRandomColor() {
+    const randomColor = Math.floor(Math.random() * colors.length);
 
     return colors[randomColor];
 }
@@ -336,12 +355,13 @@ function startTimer(interval) {
 }
 
 function printQuote() {
-    // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
+    // creates the currentQuote variable and sets the value to the random object that is returned when the getRandomQuote function is called
     // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
     // creates the html variable and uses the currentQuote variable along with key values to build a string
-    const currentQuote = getRandomQuote(quotes);
-    const currentColor = getRandomColor(colors);
-    let html = "<p class='quote'> " + currentQuote.quote + "</p>";
+    const currentQuote = getRandomQuote();
+    const currentColor = getRandomColor();
+    let html = "";
+    html = "<p class='quote'> " + currentQuote.quote + "</p>";
     html += "<p class='source'> " + currentQuote.source;
     // tests to see if the citation property is present in the currentQuote and if so, adds it to the string
     if ("citation" in currentQuote) {
