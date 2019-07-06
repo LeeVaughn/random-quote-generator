@@ -312,6 +312,7 @@ const colors = [
 ];
 // will be used to store the previously returned quotes
 const quotesReturned = [];
+let colorsReturned = [];
 let timer;
 
 /**
@@ -342,9 +343,24 @@ function getRandomQuote() {
  * @return {object} randomly selected colors object
  */
 function getRandomColor() {
-    const randomColor = Math.floor(Math.random() * colors.length);
+    // if no objects remain in the colors array, restores the colors array to its original state by combining the two arrays
+    // and resets the colorReturned array to an empty array
+    if (colors.length === 0) {
+        colors.push.apply(colors, colorsReturned);
+        colorsReturned = [];
+    }
 
-    return colors[randomColor];
+    while (colors.length > 0) {
+        const randomColor = Math.floor(Math.random() * colors.length);
+        const color = colors[randomColor];
+
+        // adds the selected color to the colorsReturned array
+        colorsReturned.push(color);
+        // removes the selected color from the colors array
+        colors.splice(randomColor, 1);
+
+        return color;
+    }
 }
 
 // assigns a setInterval method to the variable so that the printQuote function will automatically run after 10 seconds
