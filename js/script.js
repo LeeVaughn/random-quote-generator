@@ -260,6 +260,11 @@ const quotes = [
         quote: "Programming is not about typing, it's about thinking.",
         source: "Rich Hickey",
         category: "#programming"
+    },
+    {
+        quote: "It does not matter how slowly you go as long as you do not stop",
+        source: "Confucius",
+        category: "#success"
     }
 ];
 // creates an array of objects to store background and button color information
