@@ -262,9 +262,14 @@ const quotes = [
         category: "#programming"
     },
     {
-        quote: "It does not matter how slowly you go as long as you do not stop",
+        quote: "It does not matter how slowly you go as long as you do not stop.",
         source: "Confucius",
         category: "#success"
+    },
+    {
+        quote: "It's hard enough to find an error in your code when you're looking for it. It's even harder when you've assumed your code is error-free.",
+        source: "Steve McConnell",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
