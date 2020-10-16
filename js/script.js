@@ -270,6 +270,11 @@ const quotes = [
         quote: "It's hard enough to find an error in your code when you're looking for it. It's even harder when you've assumed your code is error-free.",
         source: "Steve McConnell",
         category: "#programming"
+    },
+    {
+        quote: "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
+        source: "Dan Salomon",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
