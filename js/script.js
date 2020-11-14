@@ -262,13 +262,18 @@ const quotes = [
         category: "#programming"
     },
     {
-        quote: "It does not matter how slowly you go as long as you do not stop",
+        quote: "It does not matter how slowly you go as long as you do not stop.",
         source: "Confucius",
         category: "#success"
     },
     {
-        quote: "Programming isn’t about what you know. It’s about what you can figure out.",
-        source: "Chris Pine",
+        quote: "It's hard enough to find an error in your code when you're looking for it. It's even harder when you've assumed your code is error-free.",
+        source: "Steve McConnell",
+        category: "#programming"
+    },
+    {
+        quote: "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
+        source: "Dan Salomon",
         category: "#programming"
     }
 ];
