@@ -265,6 +265,11 @@ const quotes = [
         quote: "It does not matter how slowly you go as long as you do not stop",
         source: "Confucius",
         category: "#success"
+    },
+    {
+        quote: "Programming isn’t about what you know. It’s about what you can figure out.",
+        source: "Chris Pine",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
