@@ -275,7 +275,12 @@ const quotes = [
         quote: "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code.",
         source: "Dan Salomon",
         category: "#programming"
-    }
+    },
+    {
+        quote: "Programming isn’t about what you know. It’s about what you can figure out.",
+        source: "Chris Pine",
+        category: "#programming"
+    },
 ];
 // creates an array of objects to store background and button color information
 // I didn't want to fully randomize the color because it can sometimes lead to poor contrast between quotes and background
