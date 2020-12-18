@@ -281,6 +281,11 @@ const quotes = [
         source: "Chris Pine",
         category: "#programming"
     },
+    {
+        quote: "Real artists ship.",
+        source: "Steve Jobs",
+        category: "#programming"
+    },
 ];
 // creates an array of objects to store background and button color information
 // I didn't want to fully randomize the color because it can sometimes lead to poor contrast between quotes and background
