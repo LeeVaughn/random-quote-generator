@@ -285,7 +285,7 @@ const quotes = [
         quote: "Real artists ship.",
         source: "Steve Jobs",
         category: "#programming"
-    },
+    }
 ];
 // creates an array of objects to store background and button color information
 // I didn't want to fully randomize the color because it can sometimes lead to poor contrast between quotes and background
@@ -342,6 +342,7 @@ let timer;
 
 /**
  * selects a random quote object from the quotes array
+ * 
  * @return {object} randomly selected quotes object
  */
 function getRandomQuote() {
@@ -364,6 +365,7 @@ function getRandomQuote() {
 
 /**
  * selects a random quote object from the colors array
+ * 
  * @return {object} randomly selected colors object
  */
 function getRandomColor() {
