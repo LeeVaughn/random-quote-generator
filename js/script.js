@@ -350,17 +350,16 @@ function getRandomQuote() {
         quotes.push.apply(quotes, quotesReturned);
     }
     
-    while (quotes.length > 0) {
-        const randomQuote = Math.floor(Math.random() * quotes.length);
-        const quote = quotes[randomQuote];
+    const randomQuote = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomQuote];
 
-        // adds the selected quote to the quotesReturned array
-        quotesReturned.push(quote);
-        // removes the selected quote from the quotes array
-        quotes.splice(randomQuote, 1);
+    // adds the selected quote to the quotesReturned array
+    quotesReturned.push(quote);
+    // removes the selected quote from the quotes array
+    quotes.splice(randomQuote, 1);
 
-        return quote;
-    }
+    return quote;
+
 }
 
 /**
@@ -375,17 +374,15 @@ function getRandomColor() {
         colorsReturned = [];
     }
 
-    while (colors.length > 0) {
-        const randomColor = Math.floor(Math.random() * colors.length);
-        const color = colors[randomColor];
+    const randomColor = Math.floor(Math.random() * colors.length);
+    const color = colors[randomColor];
 
-        // adds the selected color to the colorsReturned array
-        colorsReturned.push(color);
-        // removes the selected color from the colors array
-        colors.splice(randomColor, 1);
+    // adds the selected color to the colorsReturned array
+    colorsReturned.push(color);
+    // removes the selected color from the colors array
+    colors.splice(randomColor, 1);
 
-        return color;
-    }
+    return color;
 }
 
 // assigns a setInterval method to the variable so that the printQuote function will automatically run after 10 seconds
@@ -397,10 +394,9 @@ function startTimer(interval) {
 
 function printQuote() {
     // creates the currentQuote variable and sets the value to the random object that is returned when the getRandomQuote function is called
-    // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
-    // creates the html variable and uses the currentQuote variable along with key values to build a string
     const currentQuote = getRandomQuote();
     const currentColor = getRandomColor();
+    // creates the html variable and uses the currentQuote variable along with key values to build a string
     let html = "";
     html = "<p class='quote'> " + currentQuote.quote + "</p>";
     html += "<p class='source'> " + currentQuote.source;
