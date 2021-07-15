@@ -285,6 +285,11 @@ const quotes = [
         quote: "Real artists ship.",
         source: "Steve Jobs",
         category: "#programming"
+    },
+    {
+        quote: "JavaScript is the duct tape of the internet.",
+        source: "Charlie Campbell",
+        category: "#programming"
     }
 ];
 // creates an array of objects to store background and button color information
