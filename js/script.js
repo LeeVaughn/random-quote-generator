@@ -290,6 +290,16 @@ const quotes = [
         quote: "JavaScript is the duct tape of the internet.",
         source: "Charlie Campbell",
         category: "#programming"
+    },
+    {
+        quote: "Do not compare yourself to others. Compare yourself to the person you were yesterday.",
+        source: "Anonymous",
+        category: "#success"
+    },
+    {
+        quote: "The most certain way to succeed is always to try just one more time.",
+        source: "Thomas Edison",
+        category: "#success"
     }
 ];
 // creates an array of objects to store background and button color information
